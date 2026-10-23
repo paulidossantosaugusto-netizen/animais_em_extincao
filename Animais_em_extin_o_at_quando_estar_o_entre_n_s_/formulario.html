@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="JavaScript.js" defer></script>
+<script>
+  const swup = new Swup();
+</script>
+</head>
+<body class="pagina-inicio">
+
+<nav>
+    <button class="hamburguer" aria-label="Abrir menu">☰</button>
+    <ul class="menu">
+        <li><a href="index.html">Início</a></li>
+
+        <li>
+            <a href="#">Animais Terrestres</a>
+            <ul class="submenu">
+                <li><a href="lince_iberico.html">Lince-Ibérico</a></li>
+                <li><a href="rinoceronte_de_java.html">Rinoceronte de Java</a></li>
+                <li><a href="tigre_de_sumatra.html">Tigre de Sumatra</a></li>
+            </ul>
+        </li>
+
+        <li>
+            <a href="#">Animais Marinhos</a>
+            <ul class="submenu">
+                <li><a href="foca_monge_do_havai.html">Foca-Monge-do-Havaí</a></li>
+                <li><a href="baleia_franca_do_atlantico_norte.html">Baleia-Franca-do-Atlântico-Norte</a></li>
+                <li><a href="tartaruga_de_pente.html">Tartaruga de Pente</a></li>
+            </ul>
+        </li>
+
+        <li><a href="sobre_nos.html">Sobre Nós e Referências</a></li>
+        <li><a href="formulario.html">Formulário</a></li>
+    </ul>
+</nav>
+
+
+<fieldset class="formulario-box">
+    <legend>Formulário de Doação</legend>
+
+    <form id="form-doacao">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+
+        <label for="idade">Idade:</label>
+        <input type="number" id="idade" name="idade" min="0" max="120" placeholder="Digite sua idade" required>
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" placeholder="exemplo@email.com" required>
+
+        <label for="valor">Digite o valor a ser doado (R$):</label>
+        <input type="number" id="valor" name="valor" step="0.01" min="1" placeholder="Ex: 50.00" required>
+
+        <label for="pagamento">Forma de Pagamento:</label>
+        <select id="pagamento" name="pagamento" required>
+            <option value="" disabled selected>Selecione como quer pagar...</option>
+            <option value="pix">Pix</option>
+            <option value="cartao">Cartão de Crédito</option>
+            <option value="boleto">Boleto Bancário</option>
+        </select>
+
+        
+        <div id="grupo-cartao" style="display: none;">
+            <label for="num-cartao">Número do Cartão:</label>
+            <input type="text" id="num-cartao" name="num_cartao" placeholder="0000 0000 0000 0000" inputmode="numeric">
+
+            <label for="validade">Validade (MM/AA):</label>
+            <input type="text" id="validade" name="validade" placeholder="MM/AA">
+
+            <label for="cvv">CVV:</label>
+            <input type="password" id="cvv" name="cvv" placeholder="123" maxlength="4">
+        </div>
+
+        
+        <div id="grupo-boleto" style="display: none;">
+            <label for="cpf-boleto">CPF para emissão do Boleto:</label>
+            <input type="text" id="cpf-boleto" name="cpf_boleto" placeholder="000.000.000-00">
+
+            <label for="endereco-boleto">Endereço Completo:</label>
+            <input type="text" id="endereco-boleto" name="endereco_boleto" placeholder="Rua, Número, Bairro, Cidade - UF">
+
+            <label for="cep-boleto">CEP:</label>
+            <input type="text" id="cep-boleto" name="cep_boleto" placeholder="00000-000">
+        </div>
+
+        
+        <div id="grupo-pix" style="display: none;">
+            <label for="chave-pix">Chave do Pix para Comprovante:</label>
+            <input type="text" id="chave-pix" name="chave_pix" placeholder="CPF, E-mail, Telefone ou Chave Aleatória">
+        </div>
+
+        <div class="botoes-container">
+            <button type="submit" class="btn-doar">Doar</button>
+            <button type="reset" class="btn-limpar">Limpar</button>
+        </div>
+    </form>
+</fieldset>
+
+<footer>
+    <p>Integrantes: Augusto Pauli dos Santos, Henrique Simões, Lucas Martins, Guilherme Leandro.</p>
+    <p>Turma: 1° Informática</p>
+    <p>2026 — Animais em extinção: até quando estarão entre nós?</p>
+</footer>
+
+</body>
+</html>

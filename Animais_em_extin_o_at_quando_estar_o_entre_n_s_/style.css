@@ -1,0 +1,522 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+ 
+.pagina-inicio nav {
+    background-color: #081923;
+    padding: 0 15px;
+}
+ 
+.pagina-terrestre nav {
+    background-color: #1A3D2F;
+    padding: 0 15px;
+}
+ 
+.pagina-aquatico nav {
+    background-color: #28364e;
+    padding: 0 15px;
+}
+
+.hamburguer {
+    display: none;
+}
+ 
+.menu {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+ 
+.menu > li {
+    position: relative;
+}
+ 
+.menu a {
+    display: block;
+    padding: 15px 10px;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.3s;
+}
+ 
+.menu li:hover .submenu,
+.menu li:focus-within .submenu {
+    display: block;
+}
+ 
+.pagina-inicio .submenu,
+.pagina-terrestre .submenu,
+.pagina-aquatico .submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding: 0;
+    margin: 0;
+    background-color: #081923;
+    border-radius: 0 0 5px 5px;
+    overflow: hidden;
+    animation: aparecer 0.3s;
+    list-style: none;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+}
+ 
+.pagina-terrestre .submenu {
+    background-color: #1A3D2F;
+}
+ 
+.pagina-aquatico .submenu {
+    background-color: #28364e;
+}
+ 
+.submenu li {
+    width: 220px;
+}
+ 
+.pagina-inicio .menu a:hover {
+    background-color: #122C3D;
+    color: #64DFDF;
+}
+ 
+.pagina-inicio .submenu a:hover {
+    background-color: #122C3D;
+    color: #64DFDF;
+}
+ 
+.pagina-terrestre .menu a:hover {
+    background-color: #204e3c;
+}
+ 
+.pagina-terrestre .submenu a:hover {
+    background-color: #bd601e;
+    color: #2b1500;
+}
+ 
+.pagina-aquatico .menu a:hover {
+    background-color: #00214e;
+}
+ 
+.pagina-aquatico .submenu a:hover {
+    background-color: #1374ac;
+    color: #2b1500;
+}
+ 
+body.pagina-inicio {
+    background-color: #1D5C5A;
+}
+ 
+.pagina-inicio .main-container {
+    background-color: #133E3D;
+}
+ 
+.pagina-inicio .main-container h1,
+.pagina-inicio .main-container h2,
+.pagina-inicio .main-container h3 {
+    color: #ffffff;
+}
+ 
+.pagina-inicio .main-container p,
+.pagina-inicio .main-container li {
+    color: #E2F6F5;
+}
+ 
+body.pagina-terrestre {
+    background-color: #0F281E;
+    color: white;
+}
+ 
+.pagina-terrestre .main-container {
+    background-color: #17382B;
+}
+ 
+.pagina-terrestre .main-container h1,
+.pagina-terrestre .main-container h2,
+.pagina-terrestre .main-container h3 {
+    color: #ffffff;
+}
+ 
+.pagina-terrestre .main-container p,
+.pagina-terrestre .main-container li {
+    color: #e2f2eb;
+}
+ 
+body.pagina-aquatico {
+    background-color: #0A192F;
+    color: white;
+}
+ 
+.pagina-aquatico .main-container {
+    background-color: #132540;
+}
+ 
+.pagina-aquatico .main-container h1,
+.pagina-aquatico .main-container h2,
+.pagina-aquatico .main-container h3 {
+    color: #ffffff;
+}
+ 
+.pagina-aquatico .main-container p,
+.pagina-aquatico .main-container li {
+    color: #e0ebf8;
+}
+
+.main-container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 40px 50px;
+    border-radius: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+}
+ 
+.main-container h1 {
+    margin-top: 0;
+    margin-bottom: 25px;
+    text-align: center;
+    font-size: 2rem;
+}
+ 
+.main-container h2,
+.main-container h3 {
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+ 
+.main-container p,
+.main-container li {
+    margin-bottom: 1.2rem;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+ 
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+    justify-items: center;
+}
+ 
+.galeria img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+ 
+.galeria img:hover {
+    transform: scale(1.03);
+}
+ 
+.cards-faixa {
+    max-width: 1000px;
+    margin: 40px auto;
+    overflow: hidden;
+}
+ 
+.cards {
+    display: flex;
+    gap: 20px;
+    width: max-content;
+    position: relative;
+    animation: vai-e-volta 14s ease-in-out infinite alternate;
+}
+ 
+.cards:hover {
+    animation-play-state: paused;
+}
+ 
+.card {
+    flex: 0 0 250px;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 10px;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.25);
+}
+ 
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+}
+ 
+.card h3 {
+    margin: 0;
+    padding: 12px;
+    text-align: center;
+    color: #ffffff;
+    font-size: 1.1rem;
+}
+ 
+@keyframes vai-e-volta {
+    from { left: 0;    transform: translateX(0); }
+    to   { left: 100%; transform: translateX(-100%); }
+}
+ 
+@media (prefers-reduced-motion: reduce) {
+    .cards { animation: none; }
+    .cards-faixa { overflow-x: auto; }
+}
+ 
+.formulario-box {
+    max-width: 650px;
+    margin: 50px auto 30px auto;
+    padding: 25px 30px;
+    box-sizing: border-box;
+    border: 2px solid #64DFDF;
+    border-radius: 10px;
+    background-color: #081923;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+ 
+.formulario-box legend {
+    padding: 0 10px;
+    color: #64DFDF;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+ 
+.formulario-box form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+ 
+.formulario-box label {
+    display: block;
+    margin-top: 5px;
+    color: #ffffff;
+}
+ 
+.formulario-box input[type="text"],
+.formulario-box input[type="number"],
+.formulario-box input[type="email"],
+.formulario-box input[type="password"],
+.formulario-box select {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px;
+    background-color: #122C3D;
+    border: 1px solid #1D5C5A;
+    border-radius: 6px;
+    outline: none;
+    color: #ffffff;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+ 
+.formulario-box input:focus,
+.formulario-box select:focus {
+    border-color: #64DFDF;
+    box-shadow: 0 0 8px rgba(100, 223, 223, 0.5);
+}
+ 
+.formulario-box input::placeholder {
+    color: #a9c4cc;
+}
+ 
+#grupo-cartao,
+#grupo-boleto,
+#grupo-pix {
+    display: none;
+    flex-direction: column;
+    gap: 8px;
+}
+ 
+.botoes-container {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+}
+ 
+.formulario-box .btn-doar,
+.formulario-box .btn-limpar {
+    flex: 1;
+    box-sizing: border-box;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+ 
+.formulario-box .btn-doar {
+    background-color: #122C3D;
+    border: 1px solid #64DFDF;
+    color: #ffffff;
+    font-weight: bold;
+}
+ 
+.formulario-box .btn-doar:hover {
+    background-color: #64DFDF;
+    color: #081923;
+    box-shadow: 0 0 10px rgba(100, 223, 223, 0.4);
+}
+ 
+.formulario-box .btn-limpar {
+    background-color: transparent;
+    border: 1px solid #1D5C5A;
+    color: #a9c4cc;
+}
+ 
+.formulario-box .btn-limpar:hover {
+    background-color: #122C3D;
+    border-color: #64DFDF;
+    color: #ffffff;
+}
+ 
+footer {
+    margin-top: 40px;
+    padding: 20px;
+    border-top: 1px solid #444;
+    text-align: center;
+    font-size: 14px;
+}
+ 
+footer p {
+    margin: 4px 0;
+    color: white;
+}
+ 
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+ 
+.lightbox img {
+    max-width: 95%;
+    max-height: 90%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+ 
+.fechar {
+    position: absolute;
+    top: 15px;
+    right: 30px;
+    color: white;
+    font-size: 45px;
+    cursor: pointer;
+}
+ 
+
+ 
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+ 
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+ 
+@view-transition {
+    navigation: auto;
+}
+ 
+
+ 
+@media (max-width: 768px) {
+ 
+    .hamburguer {
+        display: block;
+        background: none;
+        border: 0;
+        color: white;
+        font-size: 28px;
+        padding: 10px;
+        cursor: pointer;
+    }
+ 
+    .menu {
+        display: none;
+        flex-direction: column;
+        gap: 0;
+    }
+ 
+    .menu.aberto {
+        display: flex;
+    }
+ 
+    .menu a {
+        font-size: 16px;
+        padding: 12px 8px;
+    }
+ 
+    .pagina-inicio .submenu,
+    .pagina-terrestre .submenu,
+    .pagina-aquatico .submenu {
+        display: block;
+        position: static;
+        box-shadow: none;
+        animation: none;
+        border-radius: 0;
+        background-color: rgba(0, 0, 0, 0.2);
+    }
+ 
+    .submenu li {
+        width: auto;
+    }
+ 
+    .submenu a {
+        padding-left: 25px;
+    }
+ 
+    .main-container {
+        margin: 20px 10px;
+        padding: 25px 20px;
+    }
+ 
+    .main-container h1 {
+        font-size: 1.6rem;
+    }
+ 
+    .main-container p,
+    .main-container li {
+        font-size: 1rem;
+    }
+ 
+    .galeria {
+        grid-template-columns: 1fr;
+    }
+ 
+    .formulario-box {
+        width: calc(100% - 20px);
+        margin: 25px auto;
+        padding: 20px 15px;
+    }
+ 
+    .botoes-container {
+        flex-direction: column;
+    }
+}
+ 
+.pagina-inicio .main-container a {
+    color: #64DFDF;
+}
+
+.referencias li {
+    overflow-wrap: anywhere;
+}
